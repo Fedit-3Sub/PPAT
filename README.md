@@ -35,12 +35,6 @@
 - 이동(W), 회전(E), 크기 조정(R) 단축키를 이용해 객체를 조작할 수 있습니다.
 
 ---
-
-# Acknowledgments
-
-This project uses [bpmn-js](https://github.com/bpmn-io/bpmn-js) and related tools, which are licensed under the [Apache 2.0 License](https://github.com/bpmn-io/bpmn-js/blob/develop/LICENSE).
-
----
 # Funding
 This work was supported by Institute of Information & communications Technology Planning & Evaluation (IITP) grant funded
 by the Korea government (MSIT) (No.2022-0-00431, Development of open service platform and creation technology of federated intelligent digital twin, 100%).
