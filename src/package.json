@@ -1,0 +1,54 @@
+{
+  "name": "se9-editor",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "main": "electron/main.mjs",
+  "scripts": {
+    "dev": "vite",
+    "preview": "vite preview",
+    "build": "vite build",
+    "electron:dev": "concurrently -k \"vite\" \"wait-on http://localhost:5173 && cross-env VITE_DEV_SERVER_URL=http://localhost:5173 electron .\"",
+    "electron:build": "vite build && electron-builder"
+  },
+  "dependencies": {
+    "@kitware/vtk.js": "^30.0.0",
+    "@playcanvas/observer": "^1.5.1",
+    "@playcanvas/pcui": "^5.3.3",
+    "jszip": "^3.10.1",
+    "playcanvas": "^2.13.6",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "split.js": "^1.6.5"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2",
+    "cross-env": "^7.0.3",
+    "electron": "^33.2.0",
+    "electron-builder": "^24.13.3",
+    "sass": "^1.94.2",
+    "vite": "^5.0.0",
+    "wait-on": "^7.2.0"
+  },
+  "build": {
+    "appId": "com.s9.simedit9",
+    "productName": "SimEdit9",
+    "files": [
+      "dist/**/*",
+      "electron/**/*",
+      "package.json"
+    ],
+    "mac": {
+      "target": [
+        "dmg",
+        "zip"
+      ]
+    },
+    "win": {
+      "target": "nsis"
+    },
+    "linux": {
+      "target": "AppImage"
+    }
+  }
+}
