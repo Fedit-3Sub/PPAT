@@ -20,7 +20,8 @@
 
 ## 🚀 설치 및 실행
 
-1. 빌드된 버전을 다운로드 받고 압축을 해제합니다.
+1. npm install
+2. npm run electron:dev 
 
 
 ---
